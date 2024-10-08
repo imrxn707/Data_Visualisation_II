@@ -1,18 +1,18 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 1000,
+  "width": 1100,
   "height": 800,
   "title": "Foreign Arrivals to Malaysia by Entry Point from 2020 to 2023",
   "projection": {
       "type": "mercator",
-  "center": [108, 5],
+  "center": [110, 5],
   "scale": 3000 
   },
   "layer": [
     {
       "data": {
-        "url": "malaysia-states.topojson",
-        "format": {"type": "topojson", "feature": "states"}
+        "url": "data/malaysia-states copy.topojson",
+        "format": {"type": "topojson", "feature": "malaysia"}
       },
       "mark": {
         "type": "geoshape", 
@@ -29,7 +29,7 @@
     },
     {
       "data": {
-        "url": "Malaysia Foreign Arrivals by Origin and Gender.csv"
+        "url": "data/Malaysia Foreign Arrivals by Origin and Gender.csv"
       },
       "mark": {"type": "circle", "tooltip": true},
       "encoding": {
@@ -42,11 +42,11 @@
           "title": "Total Arrivals",
           "scale": {"range": [20, 300]}
         },
-
         "tooltip": [
-          {"field": "poe", "type": "nominal", "title": "Point of Entry"},
-          {"field": "arrivals", "type": "quantitative", "title": "Total Arrivals"},
-          {"field": "state", "type": "nominal", "title": "Region"}
+          { "field": "poe", "type": "nominal", "title": "Point of Entry" },
+          { "field": "arrivals", "type": "quantitative", "title": "Total Arrivals" },
+          { "field": "state", "type": "nominal", "title": "Region" },
+          { "field": "type", "type": "nominal", "title": "Type of Arrivals" }
         ]
       }
     }
