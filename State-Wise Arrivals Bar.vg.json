@@ -1,0 +1,36 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Total Foreign Arrivals by State",
+    "width": 1100,
+    "height": 400,
+    "data": {
+      "url": "data/Malaysia Foreign Arrivals by Origin and Gender.csv",
+      "format": {"type": "csv"}
+    },
+    "transform": [
+      {
+        "aggregate": [{"op": "sum", "field": "arrivals", "as": "total_arrivals"}],
+        "groupby": ["state"]
+      }
+    ],
+    "mark": "bar",
+    "encoding": {
+      "x": {
+        "field": "state",
+        "type": "nominal",
+        "title": "State",
+        "sort": "-y",
+        "axis": {"labelAngle": 0}
+      },
+      "y": {
+        "field": "total_arrivals",
+        "type": "quantitative",
+        "title": "Total Arrivals"
+      },
+      "tooltip": [
+        {"field": "state", "type": "nominal", "title": "State"},
+        {"field": "total_arrivals", "type": "quantitative", "title": "Total Arrivals"}
+      ]
+    }
+  }
+  

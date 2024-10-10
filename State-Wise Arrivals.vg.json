@@ -1,9 +1,13 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": "State-Wise Arrivals in Malaysia",
-    "width": 800,
-    "height": 400,
-    "projection": {"type": "equalEarth"},
+    "width": 1100,
+  "height": 800,
+  "projection": {
+      "type": "mercator",
+  "center": [110, 5],
+  "scale": 3000 
+  },
     "data": {
       "url": "data/malaysia-states.topojson",
       "format": {"type": "topojson", "feature": "malaysia"}
