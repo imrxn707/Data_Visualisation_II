@@ -11,7 +11,7 @@
   "layer": [
     {
       "data": {
-        "url": "data/malaysia-states copy.topojson",
+        "url": "data/malaysia-states.topojson",
         "format": {"type": "topojson", "feature": "malaysia"}
       },
       "mark": {

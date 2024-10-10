@@ -5,7 +5,7 @@
     "height": 400,
     "projection": {"type": "equalEarth"},
     "data": {
-      "url": "data/malaysia-states copy.topojson",
+      "url": "data/malaysia-states.topojson",
       "format": {"type": "topojson", "feature": "malaysia"}
     },
     "transform": [
