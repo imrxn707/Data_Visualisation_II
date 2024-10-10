@@ -57,26 +57,50 @@
         <section class="arrival-trends">
             <h3>Arrival Trends: Changes Over the Years</h3>
             <div class="chart-container">
-                <p>Chart visualisation goes here.</p>
                 <!-- Embed your Vega-Lite chart here -->
+                <div id="arrival-trends"></div>
             </div>
         </section>
 
         <section class="text-block">
-            <p>Text explanation about the trends or the arrival changes here.</p>
+            <p>The chart above depicts the trends in foreign arrivals into Malaysia from 2020 to 2023, 
+                seperated by gender. It clearly shows the significant decline in arrivals at the 
+                start of 2020, coinciding with the global COVID-19 pandemic. By mid-2020, arrivals had 
+                dropped to almost zero due to international travel restrictions and border closures.</p>
+
+                <p>However, starting from early 2022, we see a gradual recovery as Malaysia reopens 
+                    its borders and international travel begins to pick up again. The trend shows 
+                    consistent growth, with both male and female arrivals increasing steadily. 
+                    By late 2023, arrivals reach a stable point, reflecting the normalization of 
+                    travel post-pandemic.</p>
         </section>
 
         <!-- Number of Arrivals by State Section -->
         <section class="arrivals-by-state">
             <h3>Number of Arrivals by State</h3>
             <div class="state-chart-container">
-                <p>State-wise chart visualisation goes here.</p>
                 <!-- Embed your Vega-Lite bubble chart or state map here -->
+                <div id="arrivals-by-state"></div>
             </div>
         </section>
 
         <section class="text-block">
-            <p>Explanation of state-wise differences in arrivals goes here.</p>
+            <p>This bar chart shows the number of foreign arrivals into Malaysia, broken down by state. 
+                Johor stands out with the highest number of arrivals, far surpassing other states. 
+                This is largely due to Johor’s close proximity to Singapore, one of the busiest 
+                international land crossings in the world. Many Malaysians and Singaporeans frequently 
+                travel between the two countries for work, business, and leisure, contributing to Johor's 
+                overwhelming dominance in arrivals.</p>
+
+            <p>Selangor, which includes Kuala Lumpur International Airport (KLIA), ranks second in terms 
+                of arrivals. As the main international gateway for air travelers into Malaysia, it is 
+                a major hub for tourists, business travelers, and international connections.</p>
+
+            <p>States like Sarawak, Pulau Pinang, and Kedah show significantly lower arrival numbers due to 
+                smaller international entry points, limited air traffic, and geographical factors. These states
+                 also tend to attract more domestic than international tourists, leading to fewer foreign 
+                 arrivals compared to Johor and Selangor.</p>
+
         </section>
 
         <!-- Distribution of Total Arrivals by Nation Section -->
@@ -85,6 +109,7 @@
             <div class="nation-chart-container">
                 <p>Nation-wise chart visualisation goes here.</p>
                 <!-- Embed your Vega-Lite visualisation here -->
+                <div id="distribution-nations"></div>
             </div>
         </section>
 
@@ -103,17 +128,17 @@
         }).catch(console.error);
 
         // Embed the arrival trends chart
-        vegaEmbed('#arrival-trends', 'path/to/your/arrival_trends.vg.json').then(function(result) {
+        vegaEmbed('#arrival-trends', '2_Arrival Trends.vg.json').then(function(result) {
             // Handle the Vega view instance here if needed
         }).catch(console.error);
 
         // Embed the state chart visualization
-        vegaEmbed('#arrivals-by-state', 'path/to/your/arrivals_by_state.vg.json').then(function(result) {
+        vegaEmbed('#arrivals-by-state', '3_State-Wise Arrivals Bar.vg.json').then(function(result) {
             // Handle the Vega view instance here if needed
         }).catch(console.error);
 
         // Embed the nation distribution chart
-        vegaEmbed('#distribution-nations', 'path/to/your/distribution_nations.vg.json').then(function(result) {
+        vegaEmbed('#distribution-nations', '4_Country-wise Analysis.vg.json').then(function(result) {
             // Handle the Vega view instance here if needed
         }).catch(console.error);
     </script>

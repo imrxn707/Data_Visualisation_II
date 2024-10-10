@@ -21,7 +21,7 @@
   ],
   "vconcat": [
     {
-      "width": 1100,
+      "width": 820,
       "height": 240,
       "mark": {
         "type": "area",
@@ -79,7 +79,7 @@
       }
     },
     {
-      "width": 1100,
+      "width": 820,
       "height": 60,
       "mark": "line",
       "title": "Use this line chart to filter out the data based on time",

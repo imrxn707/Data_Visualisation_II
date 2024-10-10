@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Total Foreign Arrivals by State",
-  "width": 1100,
-  "height": 400,
+  "title": "",
+  "width": 900,
+  "height": 350,
   "data": {
     "url": "data/Malaysia Foreign Arrivals by Origin and Gender.csv",
     "format": {"type": "csv"}
