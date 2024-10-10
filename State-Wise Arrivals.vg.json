@@ -1,0 +1,41 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "State-Wise Arrivals in Malaysia",
+    "width": 800,
+    "height": 400,
+    "projection": {"type": "equalEarth"},
+    "data": {
+      "url": "data/malaysia-states copy.topojson",
+      "format": {"type": "topojson", "feature": "malaysia"}
+    },
+    "transform": [
+      {
+        "lookup": "properties.name",
+        "from": {
+          "data": {
+            "url": "data/Malaysia Foreign Arrivals by Origin and Gender.csv",
+            "format": {"type": "csv"}
+          },
+          "key": "state",
+          "fields": ["arrivals"]
+        }
+      },
+      {
+        "aggregate": [{"op": "sum", "field": "arrivals", "as": "total_arrivals"}],
+        "groupby": ["properties.name"]
+      }
+    ],
+    "mark": {"type": "geoshape"},
+    "encoding": {
+      "color": {
+        "field": "total_arrivals",
+        "type": "quantitative",
+        "scale": {"type": "log", "scheme": "blues"}
+      },
+      "tooltip": [
+        {"field": "properties.name", "type": "nominal", "title": "State"},
+        {"field": "total_arrivals", "type": "quantitative", "title": "Total Arrivals"}
+      ]
+    }
+  }
+  
