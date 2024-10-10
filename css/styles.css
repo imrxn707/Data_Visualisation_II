@@ -1,0 +1,88 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+}
+
+.container {
+  width: 1200px; /* Fixed width */
+  margin: 0 auto; /* Center it horizontally */
+  background-color: white;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  padding: 20px 0;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.5em;
+  color: #666;
+}
+
+section {
+  margin: 20px 0;
+  padding: 10px 0; /* Reduced padding */
+}
+
+.intro-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.intro-text {
+  width: 45%;
+}
+
+.map-container {
+  width: 100%; /* Adjusted for centering */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center the heading */
+}
+
+.map-container h3 {
+  text-align: center; /* Center the heading */
+  margin-bottom: 10px; /* Reduced margin */
+}
+
+.arrival-trends, .arrivals-by-state, .distribution-nations {
+  text-align: center;
+}
+
+.chart-container, .state-chart-container, .nation-chart-container {
+  margin: 10px auto; /* Reduced margin */
+  width: 80%;
+  height: 400px;
+  background-color: #e0e0e0; /* Placeholder for Vega-Lite visualisation */
+}
+
+.text-block {
+  text-align: center;
+  margin: 10px; /* Reduced margin */
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #f4f4f4;
+  font-size: 0.9em;
+}
+
+/* Map Styles */
+#map {
+  width: 80%; /* Set width of the map */
+  height: 600px; /* Set height of the map */
+  margin-bottom: 10px; /* Reduced bottom margin to remove extra white space */
+}
