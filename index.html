@@ -103,18 +103,8 @@
 
         </section>
 
-        <!-- Distribution of Total Arrivals by Nation Section -->
-        <section class="distribution-nations">
-            <h3>Distribution of Total Arrivals by Nation</h3>
-            <div class="nation-chart-container">
-                <p>Nation-wise chart visualisation goes here.</p>
-                <!-- Embed your Vega-Lite visualisation here -->
-                <div id="distribution-nations"></div>
-            </div>
-        </section>
-
         <footer>
-            <p>This visualisation is created by Muhammad Imran as part of the FIT3179 A2 assignment at Monash
+            <p>This visualisation is created by Muhammad Imran as part of the FIT3179 Data Visualisation 2 assignment at Monash
                 University.</p>
         </footer>
     </div>
@@ -134,11 +124,6 @@
 
         // Embed the state chart visualization
         vegaEmbed('#arrivals-by-state', '3_State-Wise Arrivals Bar.vg.json').then(function(result) {
-            // Handle the Vega view instance here if needed
-        }).catch(console.error);
-
-        // Embed the nation distribution chart
-        vegaEmbed('#distribution-nations', '4_Country-wise Analysis.vg.json').then(function(result) {
             // Handle the Vega view instance here if needed
         }).catch(console.error);
     </script>
